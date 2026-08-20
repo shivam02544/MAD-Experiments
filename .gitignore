@@ -1,0 +1,54 @@
+# Android Studio / IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.shelf/
+.settings/
+
+# Gradle
+.gradle/
+build/
+app/build/
+captures/
+.externalNativeBuild/
+.cxx/
+local.properties
+
+# Log files
+*.log
+
+# Android
+*.apk
+*.ap_
+*.dex
+*.class
+bin/
+gen/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Keystore files
+*.jks
+*.keystore
+*.p12
+
+# Backup files
+*.bak
+*~
+
+# Gradle Wrapper
+!gradle/wrapper/gradle-wrapper.jar
+
+# User-specific
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/modules/
+.idea/runConfigurations/
