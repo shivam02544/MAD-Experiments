@@ -53,6 +53,20 @@ Implemented:
 ![Experiment 5 - Notification](screenshots/exp5.2-notification.png)
 ---
 
+### Experiment 6 — Android Basic Views
+
+Implemented:
+
+- TextView
+- Radio
+- Button
+
+
+#### Screenshot
+
+![Experiment 5 - Notification](screenshots/6.1.jpeg)
+![Experiment 5 - Notification](screenshots/6.2.jpeg)
+---
 ## Project Structure
 
 ```text
