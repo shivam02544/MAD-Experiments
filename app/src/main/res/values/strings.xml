@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MAD-Expriment</string>
+    <string name="ui_components">UI Components</string>
+    <string name="ui_components_desc">Explore basic Android UI elements and layouts.</string>
+    <string name="basic_views">Basic Views</string>
+    <string name="basic_views_desc">Test common UI components</string>
+    <string name="full_name">Full Name</string>
+    <string name="select_gender">Select Gender</string>
+    <string name="terms_conditions">I accept the terms and conditions</string>
+    <string name="enable_push_notifications">Enable Push Notifications</string>
+    <string name="submit_data">SUBMIT DATA</string>
 </resources>

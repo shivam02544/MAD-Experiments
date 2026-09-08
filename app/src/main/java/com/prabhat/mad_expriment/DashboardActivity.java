@@ -20,6 +20,7 @@ public class DashboardActivity extends AppCompatActivity {
     private MaterialButton btnLogout;
 
     private MaterialCardView cardNotification;
+    private MaterialCardView cardBasicViews;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,7 @@ public class DashboardActivity extends AppCompatActivity {
         cardPhone = findViewById(R.id.cardPhone);
         cardEmail = findViewById(R.id.cardEmail);
         cardMaps = findViewById(R.id.cardMaps);
+        cardBasicViews = findViewById(R.id.cardBasicViews);
 
         btnLogout = findViewById(R.id.btnLogout);
 
@@ -126,6 +128,12 @@ public class DashboardActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT
                 ).show();
             }
+        });
+
+        // Basic Views
+        cardBasicViews.setOnClickListener(v -> {
+            Intent intent = new Intent(DashboardActivity.this, BasicViewsActivity.class);
+            startActivity(intent);
         });
 
         // Logout
