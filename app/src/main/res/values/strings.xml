@@ -9,4 +9,23 @@
     <string name="terms_conditions">I accept the terms and conditions</string>
     <string name="enable_push_notifications">Enable Push Notifications</string>
     <string name="submit_data">SUBMIT DATA</string>
+    <string name="adaptive_ui">Adaptive UI (ListView)</string>
+    <string name="adaptive_ui_desc">Custom ListView with ImageViews adapting to item selection</string>
+    <string name="exp7">Experiment 7</string>
+    <string name="adaptive_list_title">Adaptive ListView</string>
+    <string name="adaptive_list_desc">Select any item below to update the adaptive detail preview card.</string>
+    <string name="catalog_list">Catalog List</string>
+    <string name="category_format">Category: %1$s</string>
+    <string name="exp8">Experiment 8</string>
+    <string name="menu_webview_title">Menus &amp; WebView</string>
+    <string name="menu_webview_desc">Explore Options Menu, Context/Popup Menu, and WebView integration.</string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="menu_share">Share URL</string>
+    <string name="menu_quick_bookmarks">Quick Bookmarks</string>
+    <string name="menu_clear_cache">Clear Web Cache</string>
+    <string name="bookmark_google">Google</string>
+    <string name="bookmark_wikipedia">Wikipedia</string>
+    <string name="bookmark_github">GitHub</string>
+    <string name="enter_web_url">Enter Web URL</string>
+    <string name="go">GO</string>
 </resources>

@@ -21,6 +21,7 @@ public class DashboardActivity extends AppCompatActivity {
 
     private MaterialCardView cardNotification;
     private MaterialCardView cardBasicViews;
+    private MaterialCardView cardAdaptiveList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -133,6 +134,20 @@ public class DashboardActivity extends AppCompatActivity {
         // Basic Views
         cardBasicViews.setOnClickListener(v -> {
             Intent intent = new Intent(DashboardActivity.this, BasicViewsActivity.class);
+            startActivity(intent);
+        });
+
+        // Adaptive List (Experiment 7)
+        cardAdaptiveList = findViewById(R.id.cardAdaptiveList);
+        cardAdaptiveList.setOnClickListener(v -> {
+            Intent intent = new Intent(DashboardActivity.this, AdaptiveListActivity.class);
+            startActivity(intent);
+        });
+
+        // Menus and WebView (Experiment 8)
+        MaterialCardView cardWebView = findViewById(R.id.cardWebView);
+        cardWebView.setOnClickListener(v -> {
+            Intent intent = new Intent(DashboardActivity.this, WebViewActivity.class);
             startActivity(intent);
         });
 

@@ -64,9 +64,43 @@ Implemented:
 
 #### Screenshot
 
-![Experiment 5 - Notification](screenshots/6.1.jpeg)
-![Experiment 5 - Notification](screenshots/6.2.jpeg)
+![Experiment 6 - Notification](screenshots/6.1.jpeg)
+![Experiment 6 - Notification](screenshots/6.2.jpeg)
 ---
+
+### Experiment 7 — Adaptive UI (ListView and ImageView)
+
+Implemented:
+
+- Custom `ArrayAdapter` (`AdaptiveListAdapter`) for `ListView`
+- Custom row item layout (`list_item_adaptive.xml`) with `ImageView` and `TextView`s
+- Adaptive detail preview card updating dynamically on list item selection
+- Interactive item selection handling and Toast notifications
+---
+
+#### Screenshot
+
+![Experiment 7 - Notification](screenshots/exp7.png)
+---
+
+### Experiment 8 — Menus and WebView
+
+Implemented:
+
+- Android Options Menu (`res/menu/menu_web_view.xml`) & Popup/Context Menu
+- Integrated `WebView` with JavaScript enabled and zoom controls
+- In-app URL navigation handling using `WebViewClient` and `WebChromeClient`
+- Interactive URL address bar, search action, and horizontal progress bar
+- Bottom navigation bar controls (Back, Forward, Refresh, Home)
+- System Back Press dispatcher handling for WebView navigation history
+---
+
+#### Screenshot
+
+![Experiment 8 - Notification](screenshots/exp8.1.png)
+![Experiment 8 - Notification](screenshots/exp8.2.png)
+---
+
 ## Project Structure
 
 ```text
