@@ -114,11 +114,27 @@ Implemented:
 - Dedicated `DatabaseViewActivity` with custom list row styling (`list_item_log.xml`) to display recorded database entries
 - Automated redirection to `DashboardActivity` following successful user authentication or signup
 
-
 #### Screenshot
 
 ![Experiment 9](screenshots/exp9.1.png)
 ![Experiment 9](screenshots/exp9.2.png)
+
+---
+
+### Experiment 10 — Content Provider (Contacts & Data Sharing)
+
+Implemented:
+
+- Android Contacts Content Provider integration via `ContentResolver` & `ContactsContract.CommonDataKinds.Phone`
+- Runtime permission dispatcher for `READ_CONTACTS` (`Manifest.permission.READ_CONTACTS`)
+- Custom list presentation (`ContactsAdapter` & `list_item_contact.xml`) displaying contact avatar initials, names, and phone numbers
+- Data Sharing capability allowing individual contacts to be shared via `Intent.ACTION_SEND`
+- Insert action triggering `Intent.ACTION_INSERT` for `ContactsContract.Contacts.CONTENT_URI` to add contacts via system UI
+
+#### Screenshot
+
+![Experiment 10](screenshots/exp10.1.png)
+![Experiment 10](screenshots/exp10.2.png)
 
 ---
 
@@ -135,6 +151,9 @@ AndroidExperiments
 │           │   ├── AdaptiveListActivity.java
 │           │   ├── AdaptiveListAdapter.java
 │           │   ├── BasicViewsActivity.java
+│           │   ├── ContactModel.java
+│           │   ├── ContactsActivity.java
+│           │   ├── ContactsAdapter.java
 │           │   ├── DashboardActivity.java
 │           │   ├── DatabaseHelper.java
 │           │   ├── DatabaseViewActivity.java
@@ -146,6 +165,7 @@ AndroidExperiments
 │               ├── layout/
 │               │   ├── activity_adaptive_list.xml
 │               │   ├── activity_basic_views.xml
+│               │   ├── activity_contacts.xml
 │               │   ├── activity_dashboard.xml
 │               │   ├── activity_database_view.xml
 │               │   ├── activity_main.xml
@@ -153,6 +173,7 @@ AndroidExperiments
 │               │   ├── activity_signup.xml
 │               │   ├── activity_web_view.xml
 │               │   ├── list_item_adaptive.xml
+│               │   ├── list_item_contact.xml
 │               │   └── list_item_log.xml
 │               └── menu/
 │                   └── menu_web_view.xml

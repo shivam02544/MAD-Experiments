@@ -158,6 +158,13 @@ public class DashboardActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        // Contacts Content Provider (Experiment 10)
+        MaterialCardView cardContacts = findViewById(R.id.cardContacts);
+        cardContacts.setOnClickListener(v -> {
+            Intent intent = new Intent(DashboardActivity.this, ContactsActivity.class);
+            startActivity(intent);
+        });
+
         // Logout
         btnLogout.setOnClickListener(v -> {
 
