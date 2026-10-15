@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F7F8FC"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/database_logs_title"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#171A21"
+        android:layout_marginBottom="16dp" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="12dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:strokeColor="#E5E7EF"
+        app:strokeWidth="1dp">
+
+        <ListView
+            android:id="@+id/lvDatabaseLogs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#E5E7EF"
+            android:dividerHeight="1dp"
+            android:padding="8dp"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

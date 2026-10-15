@@ -28,4 +28,7 @@
     <string name="bookmark_github">GitHub</string>
     <string name="enter_web_url">Enter Web URL</string>
     <string name="go">GO</string>
+    <string name="exp9">Experiment 9</string>
+    <string name="database_logs_title">Database Logs</string>
+    <string name="database_logs_desc">View saved data (SQLite &amp; SharedPreferences)</string>
 </resources>

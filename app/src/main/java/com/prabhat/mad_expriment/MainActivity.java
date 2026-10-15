@@ -22,6 +22,24 @@ public class MainActivity extends AppCompatActivity {
     private MaterialButton btnSignup;
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        android.content.SharedPreferences prefs = getSharedPreferences("LoginPrefs", MODE_PRIVATE);
+        etEmail.setText(prefs.getString("email", ""));
+        etPassword.setText(prefs.getString("password", ""));
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        android.content.SharedPreferences prefs = getSharedPreferences("LoginPrefs", MODE_PRIVATE);
+        android.content.SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("email", getText(etEmail));
+        editor.putString("password", getText(etPassword));
+        editor.apply();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
@@ -63,6 +81,10 @@ public class MainActivity extends AppCompatActivity {
 
                 return;
             }
+
+            // Experiment 9: Insert into SQLite
+            DatabaseHelper dbHelper = new DatabaseHelper(MainActivity.this);
+            dbHelper.insertUserLog("LOGIN", "", email, password);
 
             Intent intent = new Intent(
                     MainActivity.this,

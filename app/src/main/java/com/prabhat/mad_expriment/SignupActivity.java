@@ -1,5 +1,6 @@
 package com.prabhat.mad_expriment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +25,28 @@ public class SignupActivity extends AppCompatActivity {
 
     private MaterialButton btnCreateAccount;
     private TextView tvBackToLogin;
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        android.content.SharedPreferences prefs = getSharedPreferences("SignupPrefs", MODE_PRIVATE);
+        etName.setText(prefs.getString("name", ""));
+        etEmail.setText(prefs.getString("email", ""));
+        etPassword.setText(prefs.getString("password", ""));
+        etConfirmPassword.setText(prefs.getString("confirmPassword", ""));
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        android.content.SharedPreferences prefs = getSharedPreferences("SignupPrefs", MODE_PRIVATE);
+        android.content.SharedPreferences.Editor editor = prefs.edit();
+        editor.putString("name", getText(etName));
+        editor.putString("email", getText(etEmail));
+        editor.putString("password", getText(etPassword));
+        editor.putString("confirmPassword", getText(etConfirmPassword));
+        editor.apply();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -114,11 +137,19 @@ public class SignupActivity extends AppCompatActivity {
                 return;
             }
 
+            // Experiment 9: Insert into SQLite
+            DatabaseHelper dbHelper = new DatabaseHelper(SignupActivity.this);
+            dbHelper.insertUserLog("SIGNUP", name, email, password);
+
             Toast.makeText(
                     SignupActivity.this,
-                    "Account creation will be implemented later",
+                    "Account creation recorded in SQLite (Exp 9)",
                     Toast.LENGTH_SHORT
             ).show();
+            
+            Intent intent = new Intent(SignupActivity.this, DashboardActivity.class);
+            startActivity(intent);
+            finish();
         });
 
         // Back to login

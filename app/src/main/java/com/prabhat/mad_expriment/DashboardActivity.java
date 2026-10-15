@@ -151,6 +151,13 @@ public class DashboardActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        // Database Logs (Experiment 9)
+        MaterialCardView cardDatabase = findViewById(R.id.cardDatabase);
+        cardDatabase.setOnClickListener(v -> {
+            Intent intent = new Intent(DashboardActivity.this, DatabaseViewActivity.class);
+            startActivity(intent);
+        });
+
         // Logout
         btnLogout.setOnClickListener(v -> {
 

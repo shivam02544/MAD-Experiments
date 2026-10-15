@@ -32,8 +32,8 @@ Implemented:
 
 #### Screenshot
 
-![Experiment 4.1 - Implicit Intents](screenshots/exp4.1-intent.png)
-![Experiment 4.2 - Implicit Intents](screenshots/exp4.2-intent.png)
+![Experiment 4.1](screenshots/exp4.1-intent.png)
+![Experiment 4.2](screenshots/exp4.2-intent.png)
 
 ---
 
@@ -51,6 +51,7 @@ Implemented:
 
 ![Experiment 5 - Notification](screenshots/exp5.1-notification.png)
 ![Experiment 5 - Notification](screenshots/exp5.2-notification.png)
+
 ---
 
 ### Experiment 6 — Android Basic Views
@@ -60,12 +61,14 @@ Implemented:
 - TextView
 - Radio
 - Button
-
+- CheckBox
+- Switch
 
 #### Screenshot
 
-![Experiment 6 - Notification](screenshots/6.1.jpeg)
-![Experiment 6 - Notification](screenshots/6.2.jpeg)
+![Experiment 6 - Basic Views 1](screenshots/6.1.jpeg)
+![Experiment 6 - Basic Views 2](screenshots/6.2.jpeg)
+
 ---
 
 ### Experiment 7 — Adaptive UI (ListView and ImageView)
@@ -76,11 +79,11 @@ Implemented:
 - Custom row item layout (`list_item_adaptive.xml`) with `ImageView` and `TextView`s
 - Adaptive detail preview card updating dynamically on list item selection
 - Interactive item selection handling and Toast notifications
----
 
 #### Screenshot
 
-![Experiment 7 - Notification](screenshots/exp7.png)
+![Experiment 7 - Adaptive UI](screenshots/exp7.png)
+
 ---
 
 ### Experiment 8 — Menus and WebView
@@ -93,12 +96,30 @@ Implemented:
 - Interactive URL address bar, search action, and horizontal progress bar
 - Bottom navigation bar controls (Back, Forward, Refresh, Home)
 - System Back Press dispatcher handling for WebView navigation history
----
 
 #### Screenshot
 
-![Experiment 8 - Notification](screenshots/exp8.1.png)
-![Experiment 8 - Notification](screenshots/exp8.2.png)
+![Experiment 8](screenshots/exp8.1.png)
+![Experiment 8](screenshots/exp8.2.png)
+
+---
+
+### Experiment 9 — Data Persistence (SharedPreferences & SQLite)
+
+Implemented:
+
+- Automatic input field persistence across app restarts using `SharedPreferences` in `MainActivity` and `SignupActivity`
+- Restored input field text rendering in solid black font (`#000000`) across all input screens
+- Local SQLite database management (`DatabaseHelper`) storing user login and signup records
+- Dedicated `DatabaseViewActivity` with custom list row styling (`list_item_log.xml`) to display recorded database entries
+- Automated redirection to `DashboardActivity` following successful user authentication or signup
+
+
+#### Screenshot
+
+![Experiment 9](screenshots/exp9.1.png)
+![Experiment 9](screenshots/exp9.2.png)
+
 ---
 
 ## Project Structure
@@ -106,9 +127,37 @@ Implemented:
 ```text
 AndroidExperiments
 ├── app
-├── screenshots
-│   ├── exp4-intent.png
-│   └── exp5-notification.png
+│   └── src
+│       └── main
+│           ├── AndroidManifest.xml
+│           ├── java/com/prabhat/mad_expriment/
+│           │   ├── AdaptiveItem.java
+│           │   ├── AdaptiveListActivity.java
+│           │   ├── AdaptiveListAdapter.java
+│           │   ├── BasicViewsActivity.java
+│           │   ├── DashboardActivity.java
+│           │   ├── DatabaseHelper.java
+│           │   ├── DatabaseViewActivity.java
+│           │   ├── MainActivity.java
+│           │   ├── NotificationActivity.java
+│           │   ├── SignupActivity.java
+│           │   └── WebViewActivity.java
+│           └── res/
+│               ├── layout/
+│               │   ├── activity_adaptive_list.xml
+│               │   ├── activity_basic_views.xml
+│               │   ├── activity_dashboard.xml
+│               │   ├── activity_database_view.xml
+│               │   ├── activity_main.xml
+│               │   ├── activity_notification.xml
+│               │   ├── activity_signup.xml
+│               │   ├── activity_web_view.xml
+│               │   ├── list_item_adaptive.xml
+│               │   └── list_item_log.xml
+│               └── menu/
+│                   └── menu_web_view.xml
+├── screenshots/
 ├── build.gradle.kts
 ├── settings.gradle.kts
 └── README.md
+```
