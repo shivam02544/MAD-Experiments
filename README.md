@@ -173,6 +173,10 @@ Implemented:
 - Real-time HTTP Response Status Log displaying HTTP status codes (`200 OK`, `201 Created`), request latency in `ms`, and returned JSON response payloads
 - Fallback curated Tech Knowledge engine ensuring content availability under network constraint conditions
 
+#### Screenshot
+
+![Experiment 12](screenshots/exp12.png)
+
 ---
 
 ## Project Structure
