@@ -165,6 +165,24 @@ public class DashboardActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        // Google Maps SDK (Experiment 11)
+        MaterialCardView cardGoogleMaps = findViewById(R.id.cardGoogleMaps);
+        if (cardGoogleMaps != null) {
+            cardGoogleMaps.setOnClickListener(v -> {
+                Intent intent = new Intent(DashboardActivity.this, MapsActivity.class);
+                startActivity(intent);
+            });
+        }
+
+        // HTTP Web Services (Experiment 12)
+        MaterialCardView cardWebService = findViewById(R.id.cardWebService);
+        if (cardWebService != null) {
+            cardWebService.setOnClickListener(v -> {
+                Intent intent = new Intent(DashboardActivity.this, WebServiceActivity.class);
+                startActivity(intent);
+            });
+        }
+
         // Logout
         btnLogout.setOnClickListener(v -> {
 

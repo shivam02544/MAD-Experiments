@@ -138,6 +138,39 @@ Implemented:
 
 ---
 
+### Experiment 11 — Google Maps Application
+
+Implemented:
+
+- Integrated Google Maps Android SDK (`com.google.android.gms:play-services-maps`) via `SupportMapFragment`
+- Location Search Bar with Geocoding support (`Geocoder`) to search any city/place name and animate camera to target
+- Landmark Preset Chips for instant navigation (Bengaluru, New Delhi, Taj Mahal, Silicon Institute, Mumbai)
+- Map View Type Selectors allowing switching between Normal, Satellite, Terrain, and Hybrid views
+- Custom interactive controls: Zoom In (`+`), Zoom Out (`-`), and Clear Markers
+- Runtime location permission handling (`ACCESS_FINE_LOCATION`, `ACCESS_COARSE_LOCATION`) for My Location positioning
+- Interactive Map Tap event listener to place custom location pins and display coordinates
+- Implicit Intent launcher for opening external Google Maps app (`geo:` URI / web fallback)
+
+---
+
+### Experiment 12 — Access Web Services Using HTTP Requests (Tech News & Knowledge)
+
+Implemented:
+
+- Live Tech News & Knowledge Web Service fetching real-time articles via REST API endpoints (`https://dev.to/api/articles`)
+- Topic Filter Selectors for instant query filtering:
+   - **Latest Tech News**
+   - **Android & Mobile Tech** (`tag=android`)
+   - **AI & Innovation** (`tag=ai`)
+   - **REST Mock API** (`jsonplaceholder.typicode.com/posts`)
+- Asynchronous HTTP communication using native Java `HttpURLConnection`, `ExecutorService`, and `Handler(Looper.getMainLooper())`
+- Enhanced Article Item presentation (`PostAdapter` & `list_item_post.xml`) displaying category badges, titles, descriptions, authors, reading time, and direct article browser links
+- HTTP POST Request implementation allowing publishing/creating knowledge articles with JSON payload (`{"title": "...", "body": "...", "userId": 1}`)
+- Real-time HTTP Response Status Log displaying HTTP status codes (`200 OK`, `201 Created`), request latency in `ms`, and returned JSON response payloads
+- Fallback curated Tech Knowledge engine ensuring content availability under network constraint conditions
+
+---
+
 ## Project Structure
 
 ```text
@@ -158,8 +191,12 @@ AndroidExperiments
 │           │   ├── DatabaseHelper.java
 │           │   ├── DatabaseViewActivity.java
 │           │   ├── MainActivity.java
+│           │   ├── MapsActivity.java
 │           │   ├── NotificationActivity.java
+│           │   ├── PostAdapter.java
+│           │   ├── PostModel.java
 │           │   ├── SignupActivity.java
+│           │   ├── WebServiceActivity.java
 │           │   └── WebViewActivity.java
 │           └── res/
 │               ├── layout/
@@ -169,12 +206,15 @@ AndroidExperiments
 │               │   ├── activity_dashboard.xml
 │               │   ├── activity_database_view.xml
 │               │   ├── activity_main.xml
+│               │   ├── activity_maps.xml
 │               │   ├── activity_notification.xml
 │               │   ├── activity_signup.xml
+│               │   ├── activity_web_service.xml
 │               │   ├── activity_web_view.xml
 │               │   ├── list_item_adaptive.xml
 │               │   ├── list_item_contact.xml
-│               │   └── list_item_log.xml
+│               │   ├── list_item_log.xml
+│               │   └── list_item_post.xml
 │               └── menu/
 │                   └── menu_web_view.xml
 ├── screenshots/

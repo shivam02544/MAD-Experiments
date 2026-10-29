@@ -39,4 +39,24 @@
     <string name="total_contacts_format">Total Contacts: %1$d</string>
     <string name="permission_required">Contacts permission is required to fetch contacts.</string>
     <string name="no_contacts_found">No contacts found on device. Tap \'ADD CONTACT\' to create one.</string>
+    <string name="exp11">Experiment 11</string>
+    <string name="maps_title">Google Maps</string>
+    <string name="maps_desc">Display Google Maps SDK with markers, search geocoding, map types, and interactive controls.</string>
+    <string name="google_maps_key" translatable="false">YOUR_API_KEY_HERE</string>
+    <string name="search_location_hint">Search place or landmark&#8230;</string>
+    <string name="map_type_normal">Normal</string>
+    <string name="map_type_satellite">Satellite</string>
+    <string name="map_type_terrain">Terrain</string>
+    <string name="map_type_hybrid">Hybrid</string>
+    <string name="open_in_google_maps">OPEN IN MAPS APP</string>
+    <string name="my_location">MY LOCATION</string>
+    <string name="clear_markers">CLEAR MARKERS</string>
+    <string name="exp12">Experiment 12</string>
+    <string name="web_service_title">Tech News &amp; Knowledge Web Services</string>
+    <string name="web_service_desc">Fetch real-time tech news, software engineering knowledge, and AI articles via HTTP REST Web Services.</string>
+    <string name="fetch_posts">FETCH LATEST TECH NEWS (GET)</string>
+    <string name="create_post">PUBLISH KNOWLEDGE ARTICLE (POST)</string>
+    <string name="post_title_hint">Enter tech article title&#8230;</string>
+    <string name="post_body_hint">Enter tech article body content&#8230;</string>
+    <string name="response_log_title">HTTP Response Log</string>
 </resources>

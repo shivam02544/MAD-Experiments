@@ -41,6 +41,7 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.constraintlayout)
     implementation(libs.material)
+    implementation(libs.play.services.maps)
 
     testImplementation(libs.junit)
 
